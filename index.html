@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>GRADE CHECKER</h2>
+    <form onsubmit="per(); return false">
+        <input type="text" id="p1">
+        <button type="submit">Enter</button>
+    </form>
+    <h2 id="an"></h2>
+    <script>
+        function per(){
+            let num=document.querySelector("#p1").value;
+            num = Number(num);
+            if(num<45){
+                document.querySelector("#an").innerHTML="fail";
+            }
+            else if(num<50){
+                document.querySelector("#an").innerHTML="Your grade is D";
+            }
+            else if(num<60){
+                document.querySelector("#an").innerHTML="Your grade is C";
+            }
+            else if(num<70){
+                document.querySelector("#an").innerHTML="Your grade is B";
+            }
+            else if(num<80){
+                document.querySelector("#an").innerHTML="Your grade is A";
+            }else if(num>=80 & num<=100){
+                document.querySelector("#an").innerHTML="Your grade is A+";
+            }
+
+            else{
+                document.querySelector("#an").innerHTML="Enter valid data";
+            }
+
+        }
+    </script>
+</body>
+</html>
